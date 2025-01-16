@@ -1,0 +1,11 @@
+import requests
+
+def get_data():
+    url = "https://newapi.55lottertttapi.com/api/webapi/GetNoaverageEmerdList"
+    headers = {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzM3MDYzODg2IiwibmJmIjoiMTczNzA2Mzg4NiIsImV4cCI6IjE3MzcwNjU2ODYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIxLzE3LzIwMjUgNToxNDo0NiBBTSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJJZCI6Ijc0MzM1IiwiVXNlck5hbWUiOiI2Mjg1NzE4MzczMzgwIiwiVXNlclBob3RvIjoiaHR0cHM6Ly9hcGkubGlnaHRzcGFjZWNkbi5jb20vaW1nL2F2YXRhci5jZmE4ZGQ5ZC5zdmciLCJOaWNrTmFtZSI6IkRlc2FrdSIsIkFtb3VudCI6Ijc3Ny4zMCIsIkludGVncmFsIjoiMCIsIkxvZ2luTWFyayI6Ikg1IiwiTG9naW5UaW1lIjoiMS8xNy8yMDI1IDQ6NDQ6NDYgQU0iLCJMb2dpbklQQWRkcmVzcyI6IjEyMC4xODguNy4xMjYiLCJEYk51bWJlciI6IjAiLCJJc3ZhbGlkYXRvciI6IjAiLCJLZXlDb2RlIjoiOTIwIiwiVG9rZW5UeXBlIjoiQWNjZXNzX1Rva2VuIiwiUGhvbmVUeXBlIjoiMCIsIlVzZXJUeXBlIjoiMCIsIlVzZXJOYW1lMiI6IiIsImlzcyI6Imp3dElzc3VlciIsImF1ZCI6ImxvdHRlcnlUaWNrZXQifQ.HKoQE36HtLF5197bKMEQxNCRg85tBk5mcLUj99nPoxTR",
+        "Content-Type": "application/json"
+    }
+    response = requests.post(url, headers=headers, json={})
+    data = response.json()
+    return data
